@@ -16,8 +16,8 @@ async function getJwt(audience) {
 }
 
 (async () => {
-  const apiUrl = core.getInput("apiUrl");
-  const roleArn = core.getInput("roleArn", { required: true });
+  const apiUrl = core.getInput("api-url");
+  const roleArn = core.getInput("role-arn", { required: true });
   const audience = core.getInput("audience");
   const jwt = await getJwt(audience);
 

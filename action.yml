@@ -4,10 +4,10 @@ runs:
   using: node12
   main: action/dist/index.js
 inputs:
-  apiUrl:
+  api-url:
     description: The URL of the API that vends credentials
     required: true
-  roleArn:
+  role-arn:
     description: The full ARN of the role you want to assume
     required: true
   audience:
