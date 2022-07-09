@@ -1,5 +1,6 @@
 name: configure-aws-credentials-with-tags
 description: Assumes roles in AWS that have useful role session tags
+icon: lock
 runs:
   using: node12
   main: action/dist/index.js
