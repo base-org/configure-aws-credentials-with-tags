@@ -29,6 +29,9 @@ async function getJwt(audience) {
   });
 
   const body = await resp.json();
+  if (!body.Credentials) {
+    throw new Error(`Credentials not found, response: ${JSON.stringify(body)}`);
+  }
   const { AccessKeyId, SecretAccessKey, SessionToken } = body.Credentials;
 
   core.setSecret(SecretAccessKey);
